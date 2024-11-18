@@ -6,10 +6,11 @@
 </head>
 <body>
     <h1>Kiểm tra ngay đó có phải năm nhuận không?</h1>
-    <p>Nhập năm bạn muốn kiểm tra vào đây:</p>
-    <input type="text" id="yearCheck" name="yearCheck">
+    <label for="yearCheck">Nhập năm bạn muốn kiểm tra vào đây:</label><br>
+    <input type="text" id="yearCheck" name="yearCheck"><br>
     <button id="click">Kiểm tra</button>
     <button onclick="displayYearCheck()">Kiểm tra kiểu onclick</button>
+    <button onclick="this.innerHTML=displayYearCheck2()">Kiểm tra kiểu this.</button>
     <script src="isLeapYear.js">
 
     </script>
