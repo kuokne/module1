@@ -21,14 +21,14 @@
 
     // lồng while
     let tableStyle ;
-    tableStyle = "<table border = '1' width = '300'>"
+    tableStyle = "<table style='width: 300px; border: 1px solid black; border-collapse: collapse; text-align: center' >"
     let x = y = 1;
     debugger;
     while (x <= 10) {
-        tableStyle += "<tr align='center'>";
+        tableStyle += "<tr>";
         while (y <= 10) {
 
-           tableStyle +=  "<td>" + x * y + "</td>";
+           tableStyle +=  "<td style='border: 1px solid black; width: 30px; height: 30px; box-sizing: border-box' >" + x * y + "</td>";
             y++;
         }
         tableStyle += "</tr>";
