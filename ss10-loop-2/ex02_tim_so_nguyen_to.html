@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Thực hành vòng lặp</title>
 </head>
 <body>
-$END$
+<script>
+    let inputNumber = +prompt("Nhập vào số lượng số nguyên tố muốn hiển thị, tối đa là 20: ");
+    let num = 2; // số bắt đầu kiểm tra
+    let count = 0; // kiểm tra đã in ra bao nhiêu số
+    let result = "";
+
+    if (0 < inputNumber && inputNumber <= 20) {
+        while (count < inputNumber) {
+            isPrime = true // kiểm tra có phải là SNT không
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) { // chia hết cho 1 số nào từ 2 đến trước chính nó => false ko phải là SNT
+                    isSNT = false;
+                    break;
+                }
+            }
+            // Nếu đấy là SNT thì in ra, nếu isSNT false thì skip ko in
+            if (isPrime) {
+                result += num +"<br>";
+                count++;
+            }
+            num++;
+        }
+        document.write(result);
+    } else {
+        alert("Vui lòng nhập số trong khoảng từ 1 đến 20");
+    }
+
+</script>
 </body>
 </html>

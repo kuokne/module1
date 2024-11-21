@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Thực hành dùng vòng lặp lồng nhau</title>
 </head>
 <body>
-$END$
+<h1>Bảng cửu chương</h1>
+<script>
+
+  let customTable, a, b;
+  customTable = "<table style='width: 700px; border: 1px solid black '>";
+
+  for (a =1 ;a < 10; a++) {
+    customTable += "<tr>";
+      for (b =2; b < 10; b++) {
+        customTable += "<td style='border: 1px solid black; width: 30px; height: 40px; box-sizing: border-box; text-align: center'>" + b + "x" + a + "=" + (a*b) + "</td>";
+      }
+  }
+  customTable += "</table>";
+  document.write(customTable);
+</script>
 </body>
 </html>
