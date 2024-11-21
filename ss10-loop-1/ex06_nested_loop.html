@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp lồng nhau</title>
+</head>
+<body>
+<script>
+    // lồng for
+    // let tableStyle ;
+    // tableStyle = "<table border = '1' width = '300'>"
+    // for (x = 1; x <= 10; x++ ) {
+    //     tableStyle += "<tr align='center'>";
+    //     for (y = 1; y <= 10; y++) {
+    //         tableStyle += "<td>" + x * y + "</td>";
+    //     }
+    //     tableStyle += "</tr>";
+    // }
+    // tableStyle += "</table>"
+    // document.write(tableStyle);
+
+    // lồng while
+    let tableStyle ;
+    tableStyle = "<table border = '1' width = '300'>"
+    let x = y = 1;
+    debugger;
+    while (x <= 10) {
+        tableStyle += "<tr align='center'>";
+        while (y <= 10) {
+
+           tableStyle +=  "<td>" + x * y + "</td>";
+            y++;
+        }
+        tableStyle += "</tr>";
+        x++;
+        y = 1;
+    }
+    tableStyle += "</table>";
+    document.write(tableStyle);
+</script>
+</body>
+</html>
