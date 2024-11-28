@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành với mảng </title>
+</head>
+<body>
+<label for="textValue">
+    Nhập giá trị để truyền vào mảng: <br>
+    <input type="text" id="textValue" placeholder="Nhập giá trị">
+</label>
+<button id="addBtn" value="Add" onclick="addElement()">Add</button>
+<button id="displayBtn" value="Display" onclick="displayArr()">Display</button>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = [];
+    function addElement() {
+        array[x] = document.getElementById("textValue").value;
+        alert("Giá trị: " + array[x] + " vừa được thêm vào vị trí thứ: " + x + " của mảng")
+        x++;
+        document.getElementById("textValue").value = "";
+    }
+
+    let e = "<hr>";
+    function displayArr() {
+        for (let i = 0; i < array.length; i++) {
+            e += array[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>
