@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành tìm giá trị trong mảng </title>
+</head>
+<body>
+<script>
+  let inputValue = +prompt("Đoán xem giá trị này có trong mảng không? ")
+  let arr = [0, 3, 5, 9, -3, -13];
+  let chiSo = -1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if(inputValue === arr[i]) {
+      chiSo = i;
+    }
+  }
+  if (chiSo > -1) {
+    alert("Số bạn đoán nằm trong mảng, nằm ở vị trí thứ " + chiSo);
+  } else {
+    alert("Nope sai rồi!");
+  }
+</script>
+</body>
+</html>
