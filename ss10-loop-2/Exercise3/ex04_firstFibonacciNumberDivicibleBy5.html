@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị ra 20 số trong dãy Fibonacci đầu tiên</title>
+</head>
+<body>
+<script>
+    let a, b, c;
+    a = b = 1;
+    let result = "";
+    do {
+        result += a + "<br>";
+        c = a + b;
+        a = b;
+        b = c;
+    } while (a % 5 !== 0)
+    document.write(result);
+    document.write("Số Fibonacci đầu tiên chia hết cho 5 là: " + a)
+
+</script>
+</body>
+</html>

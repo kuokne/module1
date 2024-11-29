@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập nhiệt độ phòng</title>
+</head>
+<body>
+<script>
+  let inputTempe;
+  do {
+    inputTempe = +prompt("Nhập vào nhiệt độ phòng hiện tại:" );
+    if (inputTempe > 100) {
+      alert("Xin hãy giảm bớt nhiệt độ");
+    } else if (inputTempe < 20) {
+      alert("Xin hãy tăng nhiệt độ");
+    } else {
+      alert("Nhiệt độ bình thường");
+    }
+  } while (inputTempe > 100 || inputTempe <20);
+</script>
+</body>
+</html>

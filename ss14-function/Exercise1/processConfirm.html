@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành tạo function </title>
+</head>
+<body>
+<script>
+    function processConfirm() {
+        let result = "";
+        if(confirmKeoCon) {
+            result = "Chúc mừng bạn đã thành kẹo con";
+        } else {
+            result = "Bạn chưa đủ kẹo";
+        }
+        return result;
+    }
+
+    let confirmKeoCon = confirm("Bạn có muốn nghe nhạc Ngọt không?");
+    let answer = processConfirm(confirmKeoCon);
+    alert(answer);
+</script>
+</body>
+</html>

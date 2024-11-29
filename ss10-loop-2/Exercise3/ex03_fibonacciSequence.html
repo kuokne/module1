@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị ra 20 số trong dãy Fibonacci đầu tiên</title>
+</head>
+<body>
+<script>
+    // vòng for
+    // let a, b, c, result;
+    // a = b = 1;
+    // result = "";
+    //
+    // for (i = 0; i < 20; i++) {
+    //     result += a + "<br>"; // thêm số hiện tại vào result
+    //     c = a + b; // tính số tiếp theo
+    //     a = b;
+    //     b = c;
+    // }
+    // document.write(result);
+
+    // vòng while
+    let a, b, c;
+    a = b = 1;
+    let result = "";
+
+    while (count < 20) {
+        result += a + "<br>";
+        c = a + b;
+        a = b;
+        b = c;
+        count++;
+    }
+    document.write(result);
+</script>
+</body>
+</html>
