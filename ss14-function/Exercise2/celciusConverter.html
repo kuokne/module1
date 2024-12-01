@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành tạo hàm </title>
+</head>
+<body>
+<h1>Tempeture converter</h1>
+<p>Nhập vào giá trị F bạn muốn chuyển đổi</p>
+<form action=""></form>
+<label for="inputF">
+    <input type="number" id="inputF" placeholder="Nhập vào giá trị F" oninput="celciusConverter(this.value)" onchange="celciusConverter(this.value)">
+</label>
+<div>Celcius: <span id="outputC"></span></div>
+<script>
+
+    function celciusConverter (F) {
+        const fahrenheit = parseFloat(F);
+        if(!isNaN(fahrenheit)) {
+            document.getElementById("outputC").innerHTML = ((fahrenheit - 32)/1.8).toFixed(2); // giới hạn ở 2 chữ số thập phân vì nãy ép thành Float
+        } else {
+            document.getElementById("outputC").innerHTML = "Giá trị nhập vào không hợp lệ";
+        }
+    }
+
+
+
+    // function celciusConverter () {
+    //     let C = (F - 32)/1.8;
+    //     return C;
+    // }
+    //
+    // let F =  +prompt("Nhập vào độ F bạn muốn chuyển đổi: ");
+    // let result = celciusConverter(F);
+    // document.write(result);
+</script>
+</body>
+</html>
