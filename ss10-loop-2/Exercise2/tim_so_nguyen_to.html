@@ -13,10 +13,10 @@
 
     if (0 < inputNumber && inputNumber <= 20) {
         while (count < inputNumber) {
-            isPrime = true // kiểm tra có phải là SNT không
+            let isPrime = true // kiểm tra có phải là SNT không
             for (let i = 2; i < num; i++) {
                 if (num % i === 0) { // chia hết cho 1 số nào từ 2 đến trước chính nó => false ko phải là SNT
-                    isSNT = false;
+                    isPrime = false;
                     break;
                 }
             }
