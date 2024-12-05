@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành tạo hàm chuyển đổi từ foot sang meter và ngược lại </title>
+    <style>
+        table, th, td {
+            width: 50%;
+            border-collapse: collapse; /* Gộp các đường viền lại với nhau */
+            border: 1px black solid;
+            padding: 10px;
+            text-align: left; /* Căn giữa nội dung của các ô */
+        }
+        /* Làm cho chữ trong th đậm */
+        th {
+            text-align: center;
+            font-weight: bold; /* Dùng CSS để bôi đậm chữ trong th */
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th colspan="2">Converter</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>Feet to Meters</td>
+        <td>Meters to Feet</td>
+    </tr>
+    <tr>
+        <td>
+            <label for="inputFeet">
+                Nhập số Feet ở đây<br><input type="number" id="inputFeet" onchange="feetToMeters()">
+            </label>
+        </td>
+        <td id="no-border">
+            <label for="inputMeters">
+                Nhập số Meters ở đây<br><input type="number" id="inputMeters" onchange="metersToFeet()">
+            </label>
+        </td>
+    </tr>
+</table>
+<span id="feetResult"></span><br>
+<span id="metersResult"></span>
+
+<script>
+    function feetToMeters () {
+        let feet = parseFloat(document.getElementById("inputFeet").value);
+        if (isNaN(feet)) {
+            document.getElementById("feetResult").innerHTML = "Vui lòng nhập giá trị hợp lệ cho Feet.";
+            return;
+        }
+        let meters = feet * 0.305;
+        document.getElementById("feetResult").innerHTML = `${feet} Feet is equal to ${meters} Meters`;
+    }
+
+    function metersToFeet () {
+        let meters = parseFloat(document.getElementById("inputMeters").value);
+        if (isNaN(meters)) {
+            document.getElementById("metersResult").innerHTML = "Vui lòng nhập giá trị hợp lệ cho Meters.";
+            return;
+        }
+        let feet = 3.279 * meters;
+        document.getElementById("metersResult").innerHTML = `${meters} Meters is equal to ${feet} Feet`;
+    }
+</script>
+</body>
+</html>
