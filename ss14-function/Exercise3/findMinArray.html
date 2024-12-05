@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất của mảng </title>
+</head>
+<body>
+<script>
+    function minArr (arr) {
+        if (arr.length === 0) {
+            return "Không có giá trị nào trong mảng";
+        }
+        let min = arr[0];
+        let index = 0;
+        for(var i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                index = i;
+            }
+        }
+        return {valueMin: min, indexMin: index};
+    }
+
+    let arr1 =  [7, 12, 6, 9, 20, 56, 89];
+    let min1 = minArr(arr1);
+    console.log(min1.valueMin);
+    console.log(min1.indexMin);
+
+</script>
+</body>
+</html>
