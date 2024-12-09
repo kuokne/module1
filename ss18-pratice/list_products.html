@@ -18,9 +18,9 @@
 <body>
 <div id="result"></div>
 <script>
-    let products = [];
+    let productList = [];
 
-    class ProductList {
+    class Products {
         constructor(productCode, productName, productPrice, productQuantity) {
             this.code = productCode;
             this.name = productName;
@@ -29,17 +29,17 @@
         }
     }
 
-    products.push(new ProductList("SP001", "Fan", "20$", "10"));
-    products.push(new ProductList("SP002", "Microwave", "50$", "5"));
-    products.push(new ProductList("SP003", "Air Fryer", "60$", "15"));
+    productList.push(new Products("SP001", "Fan", "20$", "10"));
+    productList.push(new Products("SP002", "Microwave", "50$", "5"));
+    productList.push(new Products("SP003", "Air Fryer", "60$", "15"));
 
     let table = '<table><tr><th>Mã sản phẩm</th><th>Tên sản phẩm</th><th>Giá sản phẩm</th><th>Số lượng</th></tr>';
-    for (let i = 0; i < products.length; i++) {
+    for (let i = 0; i < productList.length; i++) {
         table += `<tr>
-            <td>${products[i].code}</td>
-            <td>${products[i].name}</td>
-            <td>${products[i].price}</td>
-            <td>${products[i].quantity}</td>
+            <td>${productList[i].code}</td>
+            <td>${productList[i].name}</td>
+            <td>${productList[i].price}</td>
+            <td>${productList[i].quantity}</td>
         </tr>`;
     }
     table += '</table>';
